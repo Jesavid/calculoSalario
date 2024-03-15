@@ -22,3 +22,4 @@ Cada que se calcula un nuevo salario, este queda registrado en una tabla donde s
 
 * Albino Espíndola Jesús David
 * Silva Fragoso Jonatan Eduardo
+* Vercini Meda Angel Alexis

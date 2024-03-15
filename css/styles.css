@@ -12,22 +12,76 @@
     top: 10px;
 }
 
-.formulario{
-    font-size: 24px;
-    font-weight: bold;
-}
-
 .formulario input{
-    height: 20px;
-    width: 600px;
+    height: 25px;
+    width: 500px; /* Cambia el ancho según tu preferencia */
     border-radius: 10px;
     font-size: 18px;
+    margin-bottom: 10px; /* Añade un margen inferior para separar los inputs */
 }
 
+/* Ajusta el ancho de las etiquetas */
+.formulario label {
+    display: inline-block;
+    width: 140px; /* Ajusta según la longitud de la etiqueta más larga */
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px; /* Ajusta el margen derecho */
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+/* Estilos para el botón */
 button{
     position: relative;
     height: 30px;
     width: 100px;
-    left: 100px;
-    top: 205px;
+    margin-top: 20px; /* Ajusta el margen superior */
 }
+
+.checklist{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.tabla{
+    position: relative;
+    left: 800px;
+    bottom: 590px;
+    border-collapse: collapse;
+}
+
+/* Estilos para la tabla */
+.tabla table {
+    width: 25%;
+    border-collapse: collapse; /* Para fusionar los bordes de las celdas */
+}
+
+/* Estilos para las celdas de encabezado */
+.tabla th {
+    background-color: #f2f2f2; /* Color de fondo */
+    border: 1px solid #dddddd; /* Borde */
+    padding: 8px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+}
+
+/* Estilos para las celdas de datos */
+.tabla td {
+    border: 1px solid #dddddd; /* Borde */
+    padding: 8px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+}
+
+/* Estilos para el select */
+.formulario select {
+    height: 25px;
+    width: 510px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 3px; /* Agregamos un poco de espacio interno */
+    margin-bottom: 10px; /* Añadimos margen inferior para separar de los elementos siguientes */
+}
+
+p{
+    font-weight: bold;
+}
+

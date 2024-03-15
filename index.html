@@ -11,125 +11,89 @@
         <h1>Calculadora de salario</h1>
     </div>
 
-
     <div class="formulario">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre">
-    <br>
+      <h2>Ingrese los datos del empleado</h2>
+        <label for="nombre">Nombre (s):</label>
+        <input type="text" id="nombre">
+        <br>
 
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido">
-    <br>
+        <label for="apellido">Apellido (s):</label>
+        <input type="text" id="apellido">
+        <br>
 
-    <label for="puesto">Puesto:</label>
-    <input type="text" id="puesto">
-    <br>
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad" min="0" step="1" oninput="validarEntero(this)">
+        <br>
 
-    <label for="horasTrabajadas">Horas trabajadas:</label>
-    <input type="number" id="horasTrabajadas">
-    <br>
+        <label for="puesto">Puesto:</label>
+        <select id="puesto">
+            <option value="CEO">CEO</option>
+            <option value="Project manager">Project manager</option>
+            <option value="Gerente">Gerente</option>
+            <option value="Desarrollador">Desarrollador</option>
+            <option value="Diseñador">Diseñador</option>
+            <option value="Tester">Tester</option>
+            <option value="Practicante">Practicante</option>
+        </select>
+        <br>
 
-    <label for="puesto">Puesto:</label>
-    <input type="text" id="puesto">
-    <br>
+        <label for="horasTrabajadas">Horas trabajadas:</label>
+        <input type="text" id="horasTrabajadas" min="0" step="1" oninput="validarEntero(this)">
+        <br>
 
-    <label for="horasExtra">Horas extra:</label>
-    <input type="text" id="horasExtra">
-    <br>
-
-    <label for="puesto">Puesto:</label>
-    <input type="text" id="puesto">
-    <br>
+        <label for="horasExtra">Horas extra:</label>
+        <input type="text" id="horasExtra" min="0" step="1" oninput="validarEntero(this)">
+        <br>
     </div>
 
+
     <div class="checklist">
+      <p>Bonos:</p>
         <input type="checkbox" id="puntualidad">
         <label for="puntualidad">Bono por puntualidad</label>
-
         <br>
 
         <input type="checkbox" id="rendimiento">
         <label for="rendimiento">Bono por rendimiento</label>
-
         <br>
 
-        <input type="checkbox" name="" id="">
-        <label for="rendimiento">Bono por rendimiento</label>
-
+        <input type="checkbox" id="permanencia">
+        <label for="permanencia">Bono por permanencia</label>
         <br>
 
+        <p>Deducciones:</p>
         <input type="checkbox" id="seguro">
         <label for="seguro">Seguro Medico</label>
     </div>
 
-    <button>Enviar</button>
+    <button id="enviar">Enviar</button>
 
+    <div class="tabla">
+      <h2>Registro de Empleados</h2>
+      <table id="tablaRegistro">
+          <thead>
+              <tr>
+                  <th>Nombre (s)</th>
+                  <th>Apellido (s)</th>
+                  <th>Edad</th>
+                  <th>Puesto</th>
+                  <th>Horas Trabajadas</th>
+                  <th>Horas Extra</th>
+                  <th>Salario por hora</th>
+              </tr>
+          </thead>
+          <tbody id="tbodyRegistro">
+              <!-- Aquí se añadirán las filas dinámicamente -->
+          </tbody>
+      </table>
+  </div>
 
+  <script src="js/app.js"></script>
+    <script>
+    // Función para validar que solo se ingresen números enteros
+    function validarEntero(input) {
+        input.value = input.value.replace(/[^\d]/g, '');
+    }
+  </script>
 </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="Titulo">
-      <h1>Calculadora de salario</h1>
-    </div>
-
-    <div class="formulario">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" />
-      <br />
-
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" />
-      <br />
-
-      <label for="puesto">Puesto:</label>
-      <input type="text" id="puesto" />
-      <br />
-
-      <label for="horasTrabajadas">Horas trabajadas:</label>
-      <input type="number" id="horasTrabajadas" />
-      <br />
-
-      <label for="puesto">Puesto:</label>
-      <input type="text" id="puesto" />
-      <br />
-
-      <label for="horasExtra">Horas extra:</label>
-      <input type="text" id="horasExtra" />
-      <br />
-
-      <label for="puesto">Puesto:</label>
-      <input type="text" id="puesto" />
-      <br />
-    </div>
-
-    <div class="checklist">
-      <input type="checkbox" id="puntualidad" />
-      <label for="puntualidad">Bono por puntualidad</label>
-
-      <br />
-
-      <input type="checkbox" id="rendimiento" />
-      <label for="rendimiento">Bono por rendimiento</label>
-
-      <br />
-
-      <input type="checkbox" name="" id="" />
-      <label for="rendimiento">Bono por rendimiento</label>
-
-      <br />
-
-      <input type="checkbox" id="seguro" />
-      <label for="seguro">Seguro Medico</label>
-    </div>
-
-    <button>Enviar</button>
-  </body>
 </html>
